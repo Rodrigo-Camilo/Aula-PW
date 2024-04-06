@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Títulos de Livros e Quantidade de Páginas</title>
+<script src="app.js"></script>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  table {
+    width: 80%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  th {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+  td:first-child {
+    border-right: 1px solid #ddd;
+  }
+  td:last-child {
+    border-left: 1px solid #ddd;
+  }
+</style>
+</head>
+<body>
+
+<table id="livros">
+  <tr>
+    <th onclick="colorir('livros', 0)">Título do Livro</th>
+    <th onclick="colorir('livros', 1)">Quantidade de Páginas</th>
+  </tr>
+  <tr>
+    <td>Harry Potter e a Pedra Filosofal</td>
+    <td>223</td>
+  </tr>
+  <tr>
+    <td>1984</td>
+    <td>328</td>
+  </tr>
+  <tr>
+    <td>O Senhor dos Anéis</td>
+    <td>1178</td>
+  </tr>
+  <tr>
+    <td>Orgulho e Preconceito</td>
+    <td>279</td>
+  </tr>
+  <tr>
+    <td>A Culpa é das Estrelas</td>
+    <td>313</td>
+  </tr>
+  <tr>
+    <td>O Pequeno Príncipe</td>
+    <td>96</td>
+  </tr>
+  <tr>
+    <td>A Menina que Roubava Livros</td>
+    <td>480</td>
+  </tr>
+  <tr>
+    <td>O Código Da Vinci</td>
+    <td>463</td>
+  </tr>
+  <tr>
+    <td>A Revolução dos Bichos</td>
+    <td>141</td>
+  </tr>
+  <tr>
+    <td>Dom Quixote</td>
+    <td>863</td>
+  </tr>
+</table>
+
+</body>
+</html>
