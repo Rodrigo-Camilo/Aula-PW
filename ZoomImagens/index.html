@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atividade Zoom</title>
+<script src="app.js"></script>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #affffe;
+    }
+    .gallery-container {
+        margin-bottom: 20px;
+    }
+    .gallery-title {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    .image {
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+    }
+    .image-50 {
+        width: 50px;
+        height: 50px;
+    }
+    .image-100 {
+        width: 100px;
+        height: 100px;
+    }
+    .image-150 {
+        width: 150px;
+        height: 150px;
+    }
+    .zoom-controls {
+        margin-top: 20px;
+    }
+    .zoom-controls img {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out;
+    }
+    .zoom-controls img:hover {
+        transform: scale(1.1);
+    }
+</style>
+</head>
+<body>
+<div class="gallery-container">
+    <h1 class="gallery-title">Banco de imagens</h1>
+    <div class="gallery">
+        <img src="img/img1.jpg" class="image image-100">
+        <img src="img/img2.jpg" class="image image-100">
+        <img src="img/img3.jpg" class="image image-100">
+        <img src="img/img4.jpg" class="image image-100">
+        <img src="img/img5.jpg" class="image image-100">
+        <img src="img/img6.jpg" class="image image-100">
+        <img src="img/img7.jpg" class="image image-100">
+        <img src="img/img8.jpg" class="image image-100">
+        <img src="img/img9.jpg" class="image image-100">
+        <img src="img/img10.jpg" class="image image-100">
+    </div>
+</div>
+<div class="zoom-controls">
+    <img src="img/maiszoom.png" onclick="zoom('in')">
+    <img src="img/menoszoom.png" onclick="zoom('out')">
+</div>
+</body>
+</html>
