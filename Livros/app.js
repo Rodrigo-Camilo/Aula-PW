@@ -15,7 +15,7 @@ const colorir = (idTabela, coluna) => {
     if (coluna === colunaAtual) {
         colunaAtiva = false;
         colunaAtual = -1;
-        return;
+        return
     }
 
     colunaAtiva = true;
@@ -23,7 +23,7 @@ const colorir = (idTabela, coluna) => {
     for (let i = 0; i < linhas.length; i++) {
         const celula = linhas[i].getElementsByTagName('td')[coluna];
         if (celula) {
-            if (coluna === 0) {
+            if (coluna == 0) {
                 celula.style.backgroundColor = 'lightblue';
             } else {
                 celula.style.backgroundColor = 'lightgreen';
