@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concessionaria</title>
+</head>
+<body>
+    <p id="marcaP"></p>
+    <p id="modeloP"></p>
+    <p id="anoFabricacaoP"></p>
+    <p id="valorP"></p>
+    <p id="valorAVista"></p>
+    <p id="valorAPrazo"></p>
+    <script>
+        let marcaP = document.getElementById("marcaP");
+        let modeloP = document.getElementById("modeloP");
+        let anoFabricacaoP = document.getElementById("anoFabricacaoP");
+        let valorP = document.getElementById("valorP");
+        let valorAVistaP = document.getElementById("valorAVista");
+        let valorAPrazoP = document.getElementById("valorAPrazo");
+
+        const calcularPrecoAVista = (vT) => {
+            let vDesconto = vT * 0.05;
+            let vFinal = vT - vDesconto;
+            msg = `Valor à vista: R$ ${vFinal.toFixed(2)}`
+            return msg;
+        };
+        const calcularAPrazo = (vT) => {
+            let vEntrada = vT * 0.5;
+            let resto = vT - vEntrada;
+            vParcelas = resto / 12;
+            msg = `Entrada de R$ ${vEntrada.toFixed(2)} com 12 parcelas de R$ ${vParcelas.toFixed(2)}`;
+            return msg;
+        };
+
+        let carro = {
+            marca: "Mitsubishi",
+            modelo: "Lancer Evolution X",
+            anoFabricacao: 2018,
+            valor: 68900
+        };
+
+        marcaP.textContent = `Marca: ${carro.marca}`;
+        modeloP.textContent = `Modelo: ${carro.modelo}`;
+        anoFabricacaoP.textContent = `Ano de Fabricação: ${carro.anoFabricacao}`;
+        valorP.textContent = `Valor total: R$ ${carro.valor.toFixed(2)}`;
+
+        valorAVistaP.textContent = calcularPrecoAVista(carro.valor);
+        valorAPrazoP.textContent = calcularAPrazo(carro.valor);
+    
+        const carroStr = JSON.stringify(carro);
+        localStorage.setItem("carro", carroStr);
+
+    </script>
+</body>
+</html>
